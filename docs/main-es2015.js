@@ -323,7 +323,7 @@ class AddnewformComponent {
         });
         let presentData = [];
         presentData = JSON.parse(localStorage.getItem('details'));
-        if ((presentData === null || presentData === void 0 ? void 0 : presentData.length) > 0) {
+        if (presentData && presentData.length > 0) {
             this.detailsArray = presentData;
         }
         this.getIndex();

@@ -579,7 +579,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var presentData = [];
           presentData = JSON.parse(localStorage.getItem('details'));
 
-          if ((presentData === null || presentData === void 0 ? void 0 : presentData.length) > 0) {
+          if (presentData && presentData.length > 0) {
             this.detailsArray = presentData;
           }
 
