@@ -33,7 +33,7 @@ export class AddnewformComponent implements OnInit {
 
 		let presentData: any = [];
 		presentData = JSON.parse(localStorage.getItem('details'));
-		if (presentData?.length > 0) {
+		if (presentData && presentData.length > 0) {
 			this.detailsArray = presentData;
 		}
 
