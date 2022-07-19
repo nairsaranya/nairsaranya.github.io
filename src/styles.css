@@ -1,0 +1,96 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mt-2 {
+  margin-top: 2px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.mt40 {
+  margin-top: 40px;
+}
+
+.mr-5 {
+  margin-right: 5px;
+}
+
+.pad40 {
+	padding-bottom: 40px;
+}
+
+.pos-abs {
+  position: absolute;
+}
+
+.cp {
+  cursor: pointer;
+}
+
+.wid100 {
+  width: 100%;
+}
+
+.disp-flex {
+  display: flex;
+}
+
+.alignitems {
+  align-items: center;
+}
+
+.justifycontent {
+  justify-content: center;
+}
+
+.form-class {
+  background: #fff;
+  height: 100%
+}
+
+.main-class {
+  padding: 5%;
+  background: #F8FAFC;
+  min-height: 100%;
+}
+
+.formclass {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 4px 10px #0000001a;
+  border-radius: 4px;
+  opacity: 1;
+  padding: 3%;
+}
+
+button:disabled {
+  background: #6d6d6d80 !important;
+  cursor: not-allowed !important;
+}
+
+input {
+	background: #FCFDFF 0% 0% no-repeat padding-box;
+    border: 1px solid #0000001A;
+    border-radius: 4px;
+    opacity: 1;
+    height: 30px;
+    padding: 0px 10px !important;
+    outline: none;
+    color: #000000;
+	position: relative;
+}
+
+.mat-form-field-appearance-outline.mat-form-field-invalid .mat-form-field-outline-thick, 
+.mat-form-field.mat-form-field-invalid .mat-form-field-label, .mat-error {
+      color: #aa0023 !important;
+}

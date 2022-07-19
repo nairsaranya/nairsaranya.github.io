@@ -1,0 +1,45 @@
+<div class="form-class">
+  <div class="main-class">
+    <div class="formclass">
+      <table class="table master">
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Country</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Dob</th>
+            <th>Password</th>
+            <th></th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          
+            <div class="add-class cp" routerLink="/">
+                <mat-icon class="mr-5">person_add</mat-icon>
+                <span>Create New Entry</span>
+            </div>
+          
+          <tr *ngFor="let data of tableData, let i = index">
+            <td>{{data.fname}}</td>
+            <td>{{data.lname}}</td>
+            <td>{{data.phone}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.address.country}}</td>
+            <td>{{data.address.city}}</td>
+            <td>{{data.address.state}}</td>
+            <td>{{data.dob}}</td>
+            <td>{{data.password}}</td>
+            <td class="disp-flex alignitems justifycontent"><div class="cp mr-5" (click)="editData(i)"><mat-icon>edit</mat-icon></div>
+                <div class="cp" (click)="deleteData(i)"><mat-icon>delete</mat-icon></div></td>
+            <!-- <td></div></td> -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,93 @@
+<div class="form-class">
+  <div class="main-class">
+    <div class="formclass">
+      <form [formGroup]="detailsForm">
+        <div class="col-12 col-xl-12 col-sm-8">
+          <mat-label> First Name*</mat-label>
+          <mat-form-field appearance="outline" class="wid100">
+            <input class="wid" matInput placeholder="Enter First Name" autocomplete="off" maxlength="50"
+              formControlName="fname" />
+            <mat-error *ngIf="detailsForm.controls.fname.touched"> First Name is Required</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-xl-12 col-sm-8">
+          <mat-label> Last Name*</mat-label>
+          <mat-form-field appearance="outline" class="wid100">
+            <input class="wid" matInput placeholder="Enter Last Name" autocomplete="off" maxlength="50"
+              formControlName="lname" />
+            <mat-error *ngIf="detailsForm.controls.lname.touched"> Last Name is Required</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-xl-12 col-sm-8">
+          <mat-label>Phone*</mat-label>
+          <mat-form-field appearance="outline" class="wid100">
+            <input class="wid" matInput placeholder="Enter Phone" autocomplete="off" maxlength="10"
+              formControlName="phone" (keypress)="($event.charCode >= 48 && $event.charCode < 58)" />
+            <mat-error *ngIf="detailsForm.controls.phone.touched"> Phone is Required</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-xl-12 col-sm-8">
+          <mat-label>Email*</mat-label>
+          <mat-form-field appearance="outline" class="wid100">
+            <input class="wid" matInput placeholder="Enter Email" autocomplete="off" formControlName="email" />
+            <mat-error *ngIf="detailsForm.controls.email.value == 0 && detailsForm.controls.email.touched"> Email is
+              Required</mat-error>
+            <mat-error *ngIf="detailsForm.controls.email.value !== 0 && detailsForm.controls.email.errors?.pattern">
+              Enter valid Email</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-xl-12 col-sm-8">
+          <mat-label>Country*</mat-label>
+          <mat-form-field appearance="fill" class="wid100">
+            <mat-select placeholder="Select Country" formControlName="country">
+              <mat-option value="India">India</mat-option>
+            </mat-select>
+            <mat-error *ngIf="detailsForm.controls.country.touched"> Country is Required</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-xl-12 col-sm-8">
+          <mat-label>City*</mat-label>
+          <mat-form-field appearance="fill" class="wid100">
+            <mat-select placeholder="Select City" formControlName="city">
+              <mat-option value="Kochi">Kochi</mat-option>
+            </mat-select>
+            <mat-error *ngIf="detailsForm.controls.city.touched"> city is Required</mat-error>
+
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-xl-12 col-sm-8">
+          <mat-label>State*</mat-label>
+          <mat-form-field appearance="fill" class="wid100">
+            <mat-select placeholder="Select State" formControlName="state">
+              <mat-option value="Kerala">Kerala</mat-option>
+            </mat-select>
+            <mat-error *ngIf="detailsForm.controls.state.touched"> state is Required</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-xl-12 col-sm-8">
+          <mat-label>DOB*</mat-label>
+          <mat-form-field appearance="fill" class="wid100">
+            <input class="wid" matInput [matDatepicker]="picker" placeholder="Enter DOB" autocomplete="off"
+              formControlName="dob" />
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="detailsForm.controls.dob.touched"> DOB is Required</mat-error>
+
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-xl-12 col-sm-8">
+          <mat-label>Password*</mat-label>
+          <mat-form-field appearance="outline" class="wid100">
+            <input class="wid" matInput placeholder="Enter Password" autocomplete="off" formControlName="password" />
+            <mat-error *ngIf="detailsForm.controls.password.touched"> password is Required</mat-error>
+
+          </mat-form-field>
+        </div>
+        <div class="disp-flex mt20">
+          <button class="button-class" [disabled]="!detailsForm.valid" (click)="submit()">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>

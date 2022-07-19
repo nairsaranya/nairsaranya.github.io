@@ -1,0 +1,28 @@
+.cancel{
+    float: right;
+    width: 100px;
+    height: 45px;
+    color: #1B4994;
+    font: 600 16px/24px Open Sans;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+  .submit{
+    padding-left: 10px;
+    width: 100px;
+    height: 45px;
+    float: right;
+    background: #1B4994 0% 0% no-repeat padding-box;
+    color: #FCFDFF;
+    font: 500 16px/24px Open Sans;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+  .com
+  {
+    text-align: left;
+      font: 600 16px/22px Open Sans;
+      letter-spacing: 0px;
+      color: #000000;
+      opacity: 0.9;
+  }  

@@ -1,0 +1,47 @@
+.table {
+    width: 100%;
+}
+
+.table thead th {
+    border: none;
+}
+
+.table th {
+    border: none;
+}
+
+.table td {
+    border: none;
+}
+
+.table thead tr {
+    display: flex;
+    justify-content: space-between;
+}
+
+.table tbody tr {
+    border: 1px solid #e4e4e4;
+    border-radius: 8px;
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.table .master th:last-child,td:last-child {
+    width: 15%
+}
+
+.table th,td {
+    width: 20%;
+}
+
+
+
+
+.add-class {
+    display: flex;
+    /* align-items: center; */
+    justify-content: flex-end;
+    color: #1b4994;
+}
+

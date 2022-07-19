@@ -1,0 +1,10 @@
+<div class="">
+    <div class="">
+            <div class="form-group">
+             <span class="com">{{body}}</span>
+            </div>
+    <div class="savecan-btn float-right">
+        <button class="btn submit" (click)="closeDialog(true)">{{button1}}</button>
+        <button class="btn cancel" (click)="closeDialog(false)" *ngIf="btn2">{{button2}}</button>
+    </div>
+  </div> 
